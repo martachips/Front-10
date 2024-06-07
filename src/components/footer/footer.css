@@ -1,0 +1,24 @@
+.footer {
+  margin-top: var(--rtc-margin-xl);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.footer-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to left,
+    #f4f1bb,
+    #f1d493,
+    #f1b474,
+    #f09160,
+    #ed6a5a
+  );
+  height: 35px;
+  text-align: center;
+  font-size: 0.85em;
+}

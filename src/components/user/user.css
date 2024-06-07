@@ -1,0 +1,135 @@
+.user-data-section {
+  margin: var(--rtc-margin-xl) auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 60vh;
+  font-family: var(--rtc-font-family-2);
+}
+
+.avatar {
+  width: 150px;
+  margin: 10px auto;
+  border-radius: 30%;
+}
+
+.change-img-btn {
+  width: 120px;
+  padding: var(--rtc-padding-xs);
+  font-size: 0.75em;
+  background-color: var(--rtc-color-5);
+  border-radius: var(--rtc-border-radius);
+  margin: 0 auto 60px;
+}
+
+.change-img-input {
+  display: none;
+}
+
+.principal-user-div {
+  display: flex;
+  justify-content: space-around;
+  width: 60vw;
+  height: 40vh;
+  background-color: var(--rtc-color-5);
+  border-radius: var(--rtc-border-radius);
+}
+
+.each-section-profile {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.each-section-profile h3 {
+  text-align: center;
+  align-content: center;
+  border-bottom: 1px solid rgb(56, 51, 51);
+  min-height: 50px;
+  /* margin-bottom: var(--rtc-margin-m); */
+}
+
+.attending-events-section h3 {
+  border: 1px solid rgb(56, 51, 51);
+  border-top: none;
+}
+
+.info-personal {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* margin-left: var(--rtc-margin-m); */
+}
+
+.info-personal p {
+  padding: var(--rtc-padding-xs);
+  margin: var(--rtc-margin-s);
+}
+
+.events-attending,
+.events-created,
+.edit-form {
+  overflow-y: auto;
+  position: relative;
+  padding-right: 10px;
+}
+
+.events-div {
+  padding: var(--rtc-padding-xs);
+  margin: var(--rtc-margin-s);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.events-div h4 {
+  text-wrap: wrap;
+}
+
+.events-attending::-webkit-scrollbar,
+.events-created::-webkit-scrollbar,
+.edit-form::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.events-attending::-webkit-scrollbar:vertical,
+.events-created::-webkit-scrollbar:vertical,
+.edit-form::-webkit-scrollbar:vertical {
+  width: 5px;
+}
+
+.events-attending::-webkit-scrollbar-thumb,
+.events-created::-webkit-scrollbar-thumb,
+.edit-form::-webkit-scrollbar-thumb {
+  background-color: var(--rtc-color-4);
+  border-right: 1px solid rgb(56, 51, 51);
+  border-radius: var(--rtc-border-radius);
+}
+
+.edit-data,
+.submit-edit-btn {
+  background-color: var(--rtc-color-4);
+  width: 120px;
+  height: 30px;
+  border-radius: var(--rtc-border-radius);
+  cursor: pointer;
+  font-family: var(--rtc-font-family-2);
+  font-weight: 600;
+  display: block;
+  margin: auto;
+}
+
+.edit-form {
+  display: none;
+  padding-bottom: var(--rtc-padding-m);
+}
+
+.label-edit-data {
+  padding-bottom: 4px;
+}
+
+.edit-form input {
+  background-color: var(--rtc-color-5);
+  border-bottom: 1px solid var(--rtc-color-4);
+}

@@ -1,0 +1,86 @@
+.register-title {
+  text-align: center;
+  padding: var(--rtc-padding-s);
+}
+
+.register-section {
+  width: 35svw;
+  height: 60svh;
+  display: flex;
+  margin: auto;
+  border-radius: var(--rtc-border-radius);
+  background-color: var(--rtc-color-5);
+  box-shadow: 5px 0px 15px -1px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.register-form {
+  border-right: 1px solid var(--rtc-color-4);
+}
+
+.each-input-div {
+  margin: var(--rtc-margin-xxl);
+  display: flex;
+  flex-direction: column;
+}
+
+.label-reg {
+  padding: var(--rtc-padding-s);
+  color: var(--rtc-color-4);
+}
+
+.input-reg {
+  border-bottom: 1px solid var(--rtc-color-4);
+  background-color: var(--rtc-color-5);
+  padding-bottom: var(--rtc-padding-s);
+}
+
+.input-reg::placeholder {
+  font-size: 0.7em;
+  color: rgb(56, 51, 51);
+}
+
+.pass-control {
+  font-size: 0.7em;
+  padding: 3px;
+}
+
+.submit-btn {
+  display: block;
+  margin: auto;
+}
+
+.submit-btn,
+.login-btn {
+  width: 80px;
+  height: 30px;
+  background-color: var(--rtc-color-4);
+  border-radius: var(--rtc-border-radius);
+  cursor: pointer;
+}
+
+.already-registered {
+  width: 200px;
+  margin: auto;
+  align-content: center;
+  text-align: center;
+}
+
+.already-registered p {
+  font-size: 0.8em;
+  margin: var(--rtc-margin-s);
+}
+
+.errors-container {
+  display: flex;
+  flex-direction: column;
+  margin: var(--rtc-margin-xxl) auto;
+  background-color: var(--rtc-color-wrong);
+  border-radius: var(--rtc-border-radius);
+  padding: var(--rtc-padding-m);
+  font-size: 0.9em;
+}
+
+.errors-container p::before {
+  content: '*';
+}

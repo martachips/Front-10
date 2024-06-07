@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --rtc-font-family-logo: 'Jersey 10 Charted', sans-serif;
+  --rtc-font-family-2: 'Montserrat', sans-serif;
+
+  --rtc-background-image: linear-gradient(
+    to right,
+    #f4f1bb,
+    #f1d493,
+    #f1b474,
+    #f09160,
+    #ed6a5a
+  );
+  --rtc-color-1: #e6ebe0;
+  --rtc-color-2: #5ca4a9;
+  --rtc-color-3: #9bc1bc;
+  --rtc-color-4: #f4f1bb;
+  --rtc-color-5: #ed6a5a;
+
+  --rtc-color-wrong: #e68484;
+  --rtc-color-right: #8cc78c;
+
+  /*SPACING: MARGIN, PADDING, */
+  --rtc-margin-xs: 5px;
+  --rtc-margin-s: 10px;
+  --rtc-margin-m: 15px;
+  --rtc-margin-l: 20px;
+  --rtc-margin-xl: 30px;
+  --rtc-margin-xxl: 40px;
+  --rtc-margin-xxxl: 60px;
+
+  --rtc-padding-xs: 5px;
+  --rtc-padding-s: 10px;
+  --rtc-padding-m: 15px;
+  --rtc-padding-l: 20px;
+  --rtc-padding-xl: 30px;
+
+  --rtc-gap-s: 10px;
+  --rtc-gap-m: 20px;
+
+  --rtc-border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  min-width: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100svh;
+  background-color: var(--rtc-color-4);
+  font-family: var(--rtc-font-family-2);
+  position: relative;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  min-height: 87svh;
+  position: relative;
+}
+
+h1 {
+  width: 400px;
+  text-align: center;
+  margin: auto;
+}
+
+a {
+  color: black;
+}
+
+input:focus {
+  outline: none;
+}
+
+.success-message {
+  padding: var(--rtc-padding-s);
+  margin: var(--rtc-margin-m);
+  background-color: var(--rtc-color-right);
+  text-align: center;
+  position: absolute;
+  top: 0;
+}
+
+.error-message {
+  padding: var(--rtc-padding-s);
+  margin: var(--rtc-margin-m);
+  background-color: var(--rtc-color-wrong);
+  text-align: center;
+  position: absolute;
+  top: 0;
+}
