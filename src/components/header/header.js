@@ -22,7 +22,7 @@ export const renderHeader = () => {
 
   const menuHamburguer = document.createElement('img');
   menuHamburguer.classList.add('menu-hamb');
-  menuHamburguer.src = 'public/images/menu-svgrepo-com.svg';
+  menuHamburguer.src = './images/menu-svgrepo-com.svg';
 
   const navBar = document.createElement('nav');
   navBar.classList.add('navBar');
