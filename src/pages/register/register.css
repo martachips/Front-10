@@ -1,13 +1,13 @@
 .register-title {
   text-align: center;
   padding: var(--rtc-padding-s);
+  margin: var(--rtc-margin-l);
 }
 
 .register-section {
-  width: 35svw;
-  height: 60svh;
+  min-height: 70svh;
   display: flex;
-  margin: auto;
+  margin: var(--rtc-margin-xl) auto var(--rtc-margin-xxxl);
   border-radius: var(--rtc-border-radius);
   background-color: var(--rtc-color-5);
   box-shadow: 5px 0px 15px -1px rgba(0, 0, 0, 0.4);
@@ -16,6 +16,7 @@
 
 .register-form {
   border-right: 1px solid var(--rtc-color-4);
+  min-height: 65svh;
 }
 
 .each-input-div {
@@ -83,4 +84,10 @@
 
 .errors-container p::before {
   content: '*';
+}
+
+@media (max-width: 567px) {
+  .register-section {
+    flex-wrap: wrap;
+  }
 }
