@@ -5,11 +5,13 @@ import {
   getUser
 } from '../../utils/functions';
 import { eventEndpoints, userEndpoints } from '../data/apiEndpoins';
+import { hideLoader, loader } from '../loader/loader';
 import './user.css';
 
 const main = document.querySelector('#main');
 export const User = async () => {
   main.innerHTML = '';
+  loader();
 
   const user = getUser();
   if (!user) {
@@ -27,7 +29,7 @@ export const User = async () => {
       }
     });
     console.log('Response:', res);
-
+    hideLoader();
     printUser(res);
 
     const eventsCreatedId = res.eventsCreated.map((event) => event._id);

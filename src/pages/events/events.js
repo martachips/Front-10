@@ -1,4 +1,5 @@
 import { eventEndpoints } from '../../components/data/apiEndpoins';
+import { hideLoader, loader } from '../../components/loader/loader';
 import { API } from '../../utils/api';
 import {
   attendanceBtn,
@@ -12,12 +13,14 @@ const main = document.querySelector('#main');
 
 export const eventPage = async () => {
   main.innerHTML = '';
+  loader();
 
   const events = await API({
     endpoint: eventEndpoints.getEventsRoute,
     method: 'GET'
   });
 
+  hideLoader();
   categories(events, main);
   printEvents(events, main);
   attendanceBtn();

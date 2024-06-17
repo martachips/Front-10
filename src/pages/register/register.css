@@ -90,4 +90,14 @@
   .register-section {
     flex-wrap: wrap;
   }
+
+  .register-form {
+    border: none;
+    margin: auto;
+    border-bottom: 1px solid var(--rtc-color-4);
+  }
+
+  .already-registered {
+    margin-bottom: var(--rtc-margin-s);
+  }
 }

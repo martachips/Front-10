@@ -1,4 +1,5 @@
 import { eventEndpoints } from '../../components/data/apiEndpoins';
+import { hideLoader, loader } from '../../components/loader/loader';
 import { API } from '../../utils/api';
 import {
   displayErrorMessage,
@@ -9,12 +10,12 @@ import './createEvent.css';
 const main = document.querySelector('#main');
 export const createEvent = async () => {
   main.innerHTML = '';
-
+  loader();
   const events = await API({
     endpoint: eventEndpoints.getEventsRoute,
     method: 'GET'
   });
-
+  hideLoader();
   const categories = await getCategories(events);
   createEventForm(categories);
 };
