@@ -22,7 +22,7 @@
 }
 
 .each-input-div {
-  margin: var(--rtc-margin-xl);
+  margin: var(--rtc-margin-s) var(--rtc-margin-xxl);
   display: flex;
   flex-direction: column;
 }
@@ -81,13 +81,15 @@
   }
   .login-form {
     border-right: none;
-    border-bottom: 1px solid var(--rtc-color-4);
+    /* border-bottom: 1px solid black; */
   }
   .not-registered {
-    margin-bottom: var(--rtc-margin-s);
+    margin: var(--rtc-margin-xxl) auto;
   }
-  /* .each-input-div,
+  .each-input-div {
+    margin: var(--rtc-margin-xs) var(--rtc-margin-m);
+  }
   .submit-btn {
-    /* margin: var(--rtc-margin-xs); 
-  } */
+    margin: auto;
+  }
 }

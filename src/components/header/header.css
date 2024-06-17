@@ -86,6 +86,7 @@
 @media (max-width: 479px) {
   .div-logo {
     justify-content: flex-start;
+    width: 15em;
   }
   .logo {
     font-size: 2em;
