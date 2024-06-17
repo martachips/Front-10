@@ -5,7 +5,7 @@
 }
 
 .login-section {
-  height: 70svh;
+  min-height: 59svh;
   display: flex;
   margin: var(--rtc-margin-xl) auto var(--rtc-margin-xxxl);
   border-radius: var(--rtc-border-radius);
@@ -16,13 +16,13 @@
 
 .login-form {
   border-right: 1px solid var(--rtc-color-4);
-  min-height: 65svh;
+  min-height: 45svh;
   display: flex;
   flex-direction: column;
 }
 
 .each-input-div {
-  margin: var(--rtc-margin-xxl);
+  margin: var(--rtc-margin-xl);
   display: flex;
   flex-direction: column;
 }
@@ -73,4 +73,21 @@
 .not-registered p {
   font-size: 0.8em;
   margin: var(--rtc-margin-s);
+}
+
+@media (max-width: 513px) {
+  .login-section {
+    flex-direction: column;
+  }
+  .login-form {
+    border-right: none;
+    border-bottom: 1px solid var(--rtc-color-4);
+  }
+  .not-registered {
+    margin-bottom: var(--rtc-margin-s);
+  }
+  /* .each-input-div,
+  .submit-btn {
+    /* margin: var(--rtc-margin-xs); 
+  } */
 }

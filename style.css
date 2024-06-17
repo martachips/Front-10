@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10+Charted&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
 :root {
   --rtc-font-family-logo: 'Jersey 10 Charted', sans-serif;
   --rtc-font-family-2: 'Montserrat', sans-serif;
+  --rtc-font-family-3: 'Julius Sans One', sans-serif;
 
   --rtc-background-image: linear-gradient(
     to right,

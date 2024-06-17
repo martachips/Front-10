@@ -7,9 +7,16 @@ export const renderHeader = () => {
   const header = document.querySelector('.header');
   header.innerHTML = '';
 
+  const divLogo = document.createElement('div');
+  divLogo.classList.add('div-logo');
+
   const logoTitle = document.createElement('h1');
-  logoTitle.textContent = ' EventME ';
+  logoTitle.textContent = ' Event-Me ';
   logoTitle.classList.add('logo');
+
+  const imgLogo = document.createElement('img');
+  imgLogo.classList.add('img-logo');
+  imgLogo.src = './images/disc-svgrepo-com.svg';
 
   const labelMenu = document.createElement('label');
   labelMenu.id = 'menu-hamb-label';
@@ -57,6 +64,7 @@ export const renderHeader = () => {
     navBar.append(link);
   }
   labelMenu.append(menuHamburguer);
-  header.append(logoTitle, menuCheckbox, labelMenu, navBar);
+  divLogo.append(logoTitle, imgLogo);
+  header.append(divLogo, menuCheckbox, labelMenu, navBar);
   home();
 };

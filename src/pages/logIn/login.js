@@ -21,7 +21,7 @@ const createLoginForm = () => {
     <h3 class="login-title">LOG IN</h3>
       <div class="each-input-div">
         <label class="label-email label-login" for="email">Email</label>
-        <input class="input-name input-login" type="email" id="email" name="email" required placeholder="F.e: durin123@gmail.com"></input>
+        <input class="input-name input-login" type="email" id="email" name="email" required placeholder="F.e: durin123@gmail.com" autocomplete="email"></input>
       </div>
       <div class="each-input-div">
         <label class="label-password label-login" for="password">Password</label>
@@ -78,7 +78,7 @@ export const logOut = () => {
   localStorage.removeItem('user');
   localStorage.removeItem('token');
   renderHeader();
-  // window.location.href = routes[0].page;
-  window.location.href = '/';
+  window.location.href = routes[0].page;
+  //window.location.href = '/';
   home();
 };
