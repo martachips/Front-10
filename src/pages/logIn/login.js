@@ -78,7 +78,7 @@ export const logOut = () => {
   localStorage.removeItem('user');
   localStorage.removeItem('token');
   renderHeader();
-  window.location.href = routes[0].page;
-  //window.location.href = '/';
+  // window.location.href = routes[0].page;
+  window.location.href = '/';
   home();
 };
