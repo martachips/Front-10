@@ -2,6 +2,7 @@ import { userEndpoints } from '../../components/data/apiEndpoins';
 import { routes } from '../../components/data/links';
 import { renderHeader } from '../../components/header/header';
 import { API } from '../../utils/api';
+import { displayErrorMessage } from '../../utils/functions';
 import { home } from '../home/home';
 import './login.css';
 
@@ -70,6 +71,8 @@ const submitLogin = async (e) => {
       home();
     }
   } catch (error) {
+    displayErrorMessage('Error al hacer LogIn. Email o contraseña incorrecta');
+
     console.error('Error al hacer Log In', error);
   }
 };
