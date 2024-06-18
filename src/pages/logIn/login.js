@@ -38,6 +38,9 @@ const createLoginForm = () => {
   `;
 
   main.append(loginSection);
+  document.querySelector('#email').addEventListener('input', (e) => {
+    e.target.value = e.target.value.toLowerCase();
+  });
 
   const registBtn = document.querySelector('.regist-btn');
   registBtn.addEventListener('click', routes[4].page);
@@ -53,12 +56,18 @@ const submitLogin = async (e) => {
     email: e.target[0].value,
     password: e.target[1].value
   };
+  // const formData = new FormData(e.target);
+  // let jsonData = {};
+  // formData.forEach((value, key) => {
+  //   jsonData[key] = value;
+  // });
 
   try {
     const res = await API({
       endpoint: userEndpoints.loginRoute,
       method: 'POST',
       body: userObject
+      // body: jsonData
     });
 
     if (res) {

@@ -1,4 +1,4 @@
-const BASE_URL = 'https://backend-10-ten.vercel.app/api/v1';
+const BASE_URL = 'https://backend-10-six.vercel.app/api/v1';
 
 export const userEndpoints = {
   getUsersRoute: `${BASE_URL}/user`,

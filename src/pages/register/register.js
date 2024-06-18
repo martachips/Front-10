@@ -22,15 +22,15 @@ const createFormRegister = () => {
   
     <form class="register-form" >   
     <h3 class="register-title">REGISTRO</h3>
-      <div class="each-input-div">
+      <div class="each-input-div-reg">
         <label class="label-name label-reg" for="name">Name or Username</label>
         <input class="input-name input-reg" type="text" id="name" name="name" required placeholder="F.e: Durin"></input>
       </div>
-      <div class="each-input-div">
+      <div class="each-input-div-reg">
         <label class="label-email label-reg" for="email">Email</label>
         <input class="input-name input-reg" type="email" id="email" name="email" required placeholder="F.e: durin123@gmail.com"></input>
       </div>
-      <div class="each-input-div">
+      <div class="each-input-div-reg">
         <label class="label-password label-reg" for="password">Password</label>
         <input class="input-password input-reg" type="password" id="password" name="password" required placeholder="******"></input>  
         <p class="pass-control">La contraseña debe tener al menos 6 caracteres</p>

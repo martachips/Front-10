@@ -26,27 +26,27 @@ const createEventForm = (categories) => {
 
   createEventSection.innerHTML = `
     <form class="create-form" enctype="multipart/form-data">
-      <div class="each-input-div">
+      <div class="each-input-div-reg">
         <label for="title" class="label-create label-event-title">Título</label>
         <input type="text" id="title" name="title" class="input-event-title input-create" placeholder="'F.e. Tomorrowland'" required></input>
       </div>
-      <div class="each-input-div">
+      <div class="each-input-div-reg">
         <label for="link" class="label-create label-link" >Link a página oficial</label>
         <input type="text" id="link" name="link" class="input-event-link input-create" required placeholder="'F.e. https://www.tomorrowland.com/home/'"></input>
       </div> 
-      <div class="each-input-div">
+      <div class="each-input-div-reg">
         <label for="date" class="label-create label-date">Fecha</label>
         <input type="date" id="date" name="date" class="input-event-date input-create" placeholder="'20/08/2024'"></input>
       </div> 
-      <div class="each-input-div">
+      <div class="each-input-div-reg">
         <label for="location" class="label-create label-loc" >Ubicación</label>
         <input type="text" id="location" name="location" class="input-event-loc input-create" placeholder="'F.e. Bélgica'"></input>
       </div> 
-      <div class="each-input-div">
+      <div class="each-input-div-reg">
         <label for="description" class="label-create label-descript" >Descripción</label>
         <input type="text" id="description" name="description" class="input-event-descript input-create" placeholder="'F.e. Festival de música electrónica'" maxlength="300"></input>
       </div> 
-      <div class="each-input-div">
+      <div class="each-input-div-reg">
         <label for="image" class="label-create label-img">Imagen
           <div class="div-span"> 
           <span class="img-file-span span">Ningún archivo seleccionado</span>
@@ -55,7 +55,7 @@ const createEventForm = (categories) => {
         </label>
         <input type="file" accept="image/*" id="image" name="image" class="input-event-img input-create"></input>
       </div> 
-      <div class="each-input-div">
+      <div class="each-input-div-reg">
         <label for="category" class="label-create label-categ" required>Categoría</label>
         <select id="category" name="category" class="input-event-category input-create" required>
           ${generateCategoryOptions(categories)}

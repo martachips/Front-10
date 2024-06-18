@@ -19,7 +19,7 @@
   min-height: 65svh;
 }
 
-.each-input-div {
+.each-input-div-reg {
   margin: var(--rtc-margin-xxl);
   display: flex;
   flex-direction: column;
