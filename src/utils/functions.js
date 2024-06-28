@@ -54,8 +54,8 @@ export const attendanceBtn = async () => {
             displaySuccessMessage('Asistencia confirmada con éxito');
           } else {
             displayErrorMessage(
-              'Error confirmando asistencia: ',
-              response.message
+              `Error confirmando asistencia para el usuario ${user.email} `
+              // response.message
             );
           }
         } catch (error) {
