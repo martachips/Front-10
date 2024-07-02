@@ -50,7 +50,7 @@ export const attendanceBtn = async () => {
             }
           });
 
-          if (response.message === 'Assistance confirmed succesfully') {
+          if (response.message === 'Assistance confirmed successfully') {
             displaySuccessMessage('Asistencia confirmada con éxito');
           } else {
             displayErrorMessage(
@@ -78,7 +78,7 @@ export const attendanceBtn = async () => {
               }
             });
 
-            if (response.message === 'Assistance confirmed succesfully') {
+            if (response.message === 'Assistance confirmed successfully') {
               displaySuccessMessage('Asistencia confirmada con éxito');
             } else {
               displayErrorMessage(
