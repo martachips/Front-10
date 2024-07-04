@@ -1,5 +1,5 @@
-import { eventEndpoints } from '../../components/data/apiEndpoins';
 import { hideLoader, loader } from '../../components/loader/loader';
+import { eventEndpoints } from '../../data/apiEndpoins';
 import { API } from '../../utils/api';
 import {
   attendanceBtn,

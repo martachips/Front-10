@@ -1,6 +1,6 @@
-import { userEndpoints } from '../../components/data/apiEndpoins';
-import { routes } from '../../components/data/links';
 import { renderHeader } from '../../components/header/header';
+import { userEndpoints } from '../../data/apiEndpoins';
+import { routes } from '../../data/links';
 import { API } from '../../utils/api';
 import { displayErrorMessage } from '../../utils/functions';
 import { home } from '../home/home';
@@ -56,18 +56,12 @@ const submitLogin = async (e) => {
     email: e.target[0].value,
     password: e.target[1].value
   };
-  // const formData = new FormData(e.target);
-  // let jsonData = {};
-  // formData.forEach((value, key) => {
-  //   jsonData[key] = value;
-  // });
 
   try {
     const res = await API({
       endpoint: userEndpoints.loginRoute,
       method: 'POST',
       body: userObject
-      // body: jsonData
     });
 
     if (res) {

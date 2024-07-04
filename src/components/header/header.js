@@ -1,5 +1,5 @@
 import './header.css';
-import { routes } from '../data/links';
+import { routes } from '../../data/links';
 import { home } from '../../pages/home/home';
 import { logOut } from '../../pages/logIn/login';
 

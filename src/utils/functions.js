@@ -1,8 +1,4 @@
-import {
-  attendantEndpoints,
-  userEndpoints
-} from '../components/data/apiEndpoins';
-import { User } from '../components/user/user';
+import { attendantEndpoints, userEndpoints } from '../data/apiEndpoins';
 import { API } from './api';
 
 export const getToken = () => localStorage.getItem('token');

@@ -1,5 +1,5 @@
-import { userEndpoints } from '../../components/data/apiEndpoins';
-import { routes } from '../../components/data/links';
+import { userEndpoints } from '../../data/apiEndpoins';
+import { routes } from '../../data/links';
 import { API } from '../../utils/api';
 import {
   displayErrorMessage,

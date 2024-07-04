@@ -1,10 +1,10 @@
+import { eventEndpoints, userEndpoints } from '../../data/apiEndpoins';
 import { API } from '../../utils/api';
 import {
   displayErrorMessage,
   displaySuccessMessage,
   getUser
 } from '../../utils/functions';
-import { eventEndpoints, userEndpoints } from '../data/apiEndpoins';
 import { hideLoader, loader } from '../loader/loader';
 import './user.css';
 

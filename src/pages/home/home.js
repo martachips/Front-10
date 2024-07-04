@@ -1,4 +1,4 @@
-import { routes } from '../../components/data/links';
+import { routes } from '../../data/links';
 import './home.css';
 
 const main = document.querySelector('#main');
