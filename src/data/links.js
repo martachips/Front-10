@@ -8,26 +8,32 @@ import { register } from '../pages/register/register';
 export const routes = [
   {
     text: 'Home',
-    page: home
+    page: home,
+    path: '/home'
   },
   {
     text: 'Events',
-    page: eventPage
+    page: eventPage,
+    path: '/events'
   },
   {
     text: 'MyProfile',
-    page: showProfile
+    page: showProfile,
+    path: '/profile'
   },
   {
     text: 'Create Event',
-    page: createEvent
+    page: createEvent,
+    path: '/createEvent'
   },
   {
     text: 'Register',
-    page: register
+    page: register,
+    path: '/register'
   },
   {
     text: 'LogIn',
-    page: login
+    page: login,
+    path: '/logIn'
   }
 ];
