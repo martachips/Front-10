@@ -9,7 +9,7 @@ export const routes = [
   {
     text: 'Home',
     page: home,
-    path: '/home'
+    path: '/'
   },
   {
     text: 'Events',

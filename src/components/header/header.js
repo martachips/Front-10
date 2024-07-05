@@ -2,6 +2,7 @@ import './header.css';
 import { routes } from '../../data/links';
 import { home } from '../../pages/home/home';
 import { logOut } from '../../pages/logIn/login';
+import { navigate } from '../../utils/navigate';
 
 export const renderHeader = () => {
   const header = document.querySelector('.header');
@@ -49,7 +50,7 @@ export const renderHeader = () => {
     const linkClassName = route.text.toLowerCase().replace(/\s+/g, '-');
     link.classList.add('nav-link', linkClassName);
     link.textContent = route.text;
-    link.href = '#';
+    link.href = route.path;
 
     if (user && route.text === 'LogIn') {
       link.textContent = 'LogOut';
@@ -60,7 +61,9 @@ export const renderHeader = () => {
       link.textContent = route.text;
     }
 
-    link.addEventListener('click', route.page);
+    link.addEventListener('click', (e) =>
+      navigate({ e, page: route.page, path: route.path })
+    );
     navBar.append(link);
   }
   labelMenu.append(menuHamburguer);
