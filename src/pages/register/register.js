@@ -5,6 +5,7 @@ import {
   displayErrorMessage,
   displaySuccessMessage
 } from '../../utils/functions';
+import { submitLogin } from '../logIn/login';
 import './register.css';
 
 const main = document.querySelector('#main');
@@ -74,6 +75,8 @@ const submitForm = async (e) => {
       console.log('Registro realizado con éxito ', response);
       displaySuccessMessage('Registro realizado con éxito');
       form.reset();
+
+      await submitLogin({ email: userData.email, password: userData.password });
     } else {
       const errorMessage = await response.text();
       console.error('Error en la solicitud de registro ', errorMessage);

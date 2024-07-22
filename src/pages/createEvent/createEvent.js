@@ -11,13 +11,22 @@ const main = document.querySelector('#main');
 export const createEvent = async () => {
   main.innerHTML = '';
   loader();
-  const events = await API({
-    endpoint: eventEndpoints.getEventsRoute,
-    method: 'GET'
-  });
-  hideLoader();
-  const categories = await getCategories(events);
-  createEventForm(categories);
+  try {
+    const events = await API({
+      endpoint: eventEndpoints.getEventsRoute,
+      method: 'GET'
+    });
+    const categories = await getCategories(events);
+    createEventForm(categories);
+  } catch (error) {
+    displayErrorMessage('Error al cargar el formulario de creación de eventos');
+    console.error(
+      'Error al cargar el formulario de creación de eventos: ',
+      error
+    );
+  } finally {
+    hideLoader();
+  }
 };
 
 const createEventForm = (categories) => {
@@ -103,8 +112,6 @@ const submitFormEvent = async (e) => {
       body: formData
     });
 
-    hideLoader();
-
     if (res) {
       displaySuccessMessage('Se ha creado el evento exitosamente');
       console.log('Evento creado: ', res);
@@ -115,6 +122,8 @@ const submitFormEvent = async (e) => {
   } catch (error) {
     console.error('Error al enviar el formulario: ', error);
     displayErrorMessage('Error al enviar el formulario');
+  } finally {
+    console.log('ocultando loader');
     hideLoader();
   }
 };

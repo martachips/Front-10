@@ -46,15 +46,18 @@ const createLoginForm = () => {
   registBtn.addEventListener('click', routes[4].page);
 
   const loginform = document.querySelector('.login-form');
-  loginform.addEventListener('submit', submitLogin);
+  loginform.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = e.target[0].value;
+    const password = e.target[1].value;
+    submitLogin({ email, password });
+  });
 };
 
-const submitLogin = async (e) => {
-  e.preventDefault();
-
+export const submitLogin = async ({ email, password }) => {
   const userObject = {
-    email: e.target[0].value,
-    password: e.target[1].value
+    email,
+    password
   };
 
   try {
@@ -68,8 +71,6 @@ const submitLogin = async (e) => {
       const { token, user } = res;
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));
-      console.log(token, user);
-      console.log('Log In realizado con éxito ', res);
       renderHeader();
       home();
     }
