@@ -17,5 +17,7 @@ export const loader = () => {
 
 export const hideLoader = () => {
   const loader = document.querySelector('.loadership_WHYDT');
-  loader.classList.add('loaded');
+  if (loader) {
+    loader.classList.add('loaded');
+  }
 };

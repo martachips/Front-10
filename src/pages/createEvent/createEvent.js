@@ -93,7 +93,7 @@ const imgSelected = () => {
 const submitFormEvent = async (e) => {
   e.preventDefault();
   console.log('enviando formulario');
-
+  loader();
   const formData = new FormData(e.target);
 
   try {
@@ -103,8 +103,9 @@ const submitFormEvent = async (e) => {
       body: formData
     });
 
+    hideLoader();
+
     if (res) {
-      // const result = await res.json();
       displaySuccessMessage('Se ha creado el evento exitosamente');
       console.log('Evento creado: ', res);
     } else {
@@ -114,6 +115,7 @@ const submitFormEvent = async (e) => {
   } catch (error) {
     console.error('Error al enviar el formulario: ', error);
     displayErrorMessage('Error al enviar el formulario');
+    hideLoader();
   }
 };
 

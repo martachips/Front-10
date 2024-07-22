@@ -1,3 +1,4 @@
+import { attendanceBtn } from '../../components/events/attendance';
 import {
   createEditEventBtn,
   createEditForm
@@ -7,7 +8,7 @@ import { createValidateBtn } from '../../components/events/validateEvent/validat
 import { hideLoader, loader } from '../../components/loader/loader';
 import { eventEndpoints } from '../../data/apiEndpoins';
 import { API } from '../../utils/api';
-import { attendanceBtn, getUser } from '../../utils/functions';
+import { getUser } from '../../utils/functions';
 import './events.css';
 
 const main = document.querySelector('#main');
@@ -139,11 +140,3 @@ const categories = (events, fatherElement) => {
   }
   fatherElement.append(divCategories);
 };
-
-// const validationCategories = (events, fatherElement, isAdmin) => {
-//   const user = getUser();
-//   const isAdmin = user && user.role === 'admin';
-
-//   if (isAdmin) {
-//   }
-// };
