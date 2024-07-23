@@ -58,9 +58,9 @@ const createEventForm = (categories) => {
       <div class="each-input-div-reg">
         <label for="image" class="label-create label-img">Imagen
           <div class="div-span"> 
-          <span class="img-file-span span">Ningún archivo seleccionado</span>
-          <span class="img-file-btn span"> Buscar archivo</span>
-        </div>
+            <span class="img-file-span span">Ningún archivo seleccionado</span>
+            <span class="img-file-btn span"> Buscar archivo</span>
+          </div>
         </label>
         <input type="file" accept="image/*" id="image" name="image" class="input-event-img input-create"></input>
       </div> 
@@ -72,7 +72,6 @@ const createEventForm = (categories) => {
       </div> 
       <button class="create-btn">Crear</button>
     </form>
-  
   `;
 
   main.append(createEventSection);

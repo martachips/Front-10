@@ -42,6 +42,7 @@
   /* width: 80%; */
   font-size: 3em;
   font-family: var(--rtc-font-family-3);
+  user-select: none;
 }
 .logo::first-letter {
   font-size: 1.15em;
