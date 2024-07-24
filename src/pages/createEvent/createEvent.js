@@ -1,5 +1,6 @@
 import { hideLoader, loader } from '../../components/loader/loader';
 import { eventEndpoints } from '../../data/apiEndpoins';
+import { categories, generateCategoryOptions } from '../../data/categories';
 import { API } from '../../utils/api';
 import {
   displayErrorMessage,
@@ -12,11 +13,6 @@ export const createEvent = async () => {
   main.innerHTML = '';
   loader();
   try {
-    const events = await API({
-      endpoint: eventEndpoints.getEventsRoute,
-      method: 'GET'
-    });
-    const categories = await getCategories(events);
     createEventForm(categories);
   } catch (error) {
     displayErrorMessage('Error al cargar el formulario de creación de eventos');
@@ -125,24 +121,4 @@ const submitFormEvent = async (e) => {
     console.log('ocultando loader');
     hideLoader();
   }
-};
-
-const getCategories = async (events) => {
-  const categories = new Set();
-  categories.add('Selecciona una categoría');
-
-  for (const event of events) {
-    categories.add(event.category);
-  }
-  return Array.from(categories);
-};
-
-const generateCategoryOptions = (categories) => {
-  if (!Array.isArray(categories)) {
-    return '<option value="">No categories available</option>';
-  }
-
-  return categories
-    .map((category) => `<option value="${category}">${category}</option>`)
-    .join('');
 };
