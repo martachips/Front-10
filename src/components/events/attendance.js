@@ -19,8 +19,10 @@ export const attendanceBtn = async () => {
         if (response.message === 'Assistance confirmed successfully') {
           displaySuccessMessage('Asistencia confirmada con éxito');
 
-          user.eventsToAttend.push(eventId);
-          updateUser(user);
+          if (user) {
+            user.eventsToAttend.push(eventId);
+            updateUser(user);
+          }
 
           const confirmMessage = document.createElement('p');
           confirmMessage.textContent = 'Ya ha sido confirmada tu asistencia';
