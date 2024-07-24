@@ -29,7 +29,7 @@ export const displayEventDetails = (event, user) => {
     </div>
     <div class="details">
       <p class="event-title info">${event.title}</p>
-      <a href="${event.link}" class="event-link info">${event.link}</a>
+      <a href="${event.link}" class="event-link info">Página Oficial</a>
       <p class="event-location info">${event.location}</p>
       <p class="event-descript info">${event.description}</p>
       <p class="event-category info">${event.category}</p>
