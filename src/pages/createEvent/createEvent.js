@@ -1,3 +1,4 @@
+import { generateInput } from '../../components/forms/forms';
 import { hideLoader, loader } from '../../components/loader/loader';
 import { eventEndpoints } from '../../data/apiEndpoins';
 import { categories, generateCategoryOptions } from '../../data/categories';
@@ -31,28 +32,38 @@ const createEventForm = (categories) => {
 
   createEventSection.innerHTML = `
     <form class="create-form" enctype="multipart/form-data">
+    ${generateInput({
+      id: 'title',
+      placeholder: "'F.e. Tomorrowland'",
+      labelText: 'Título',
+      labelInputClass: 'create'
+    })}
+    ${generateInput({
+      id: 'link',
+      placeholder: "'F.e. https://www.tomorrowland.com/home/'",
+      labelText: 'Link a página oficial',
+      labelInputClass: 'create'
+    })}
+    ${generateInput({
+      id: 'date',
+      placeholder: "'20/08/2024'",
+      labelText: 'Fecha',
+      labelInputClass: 'create'
+    })}
+    ${generateInput({
+      id: 'location',
+      placeholder: "'F.e. Bélgica'",
+      labelText: 'Ubicación',
+      labelInputClass: 'create'
+    })}
+    ${generateInput({
+      id: 'description',
+      placeholder: "'F.e. Festival de música electrónica'",
+      labelText: 'Descripción',
+      labelInputClass: 'create'
+    })}
       <div class="each-input-div-reg">
-        <label for="title" class="label-create label-event-title">Título</label>
-        <input type="text" id="title" name="title" class="input-event-title input-create" placeholder="'F.e. Tomorrowland'" required></input>
-      </div>
-      <div class="each-input-div-reg">
-        <label for="link" class="label-create label-link" >Link a página oficial</label>
-        <input type="text" id="link" name="link" class="input-event-link input-create" required placeholder="'F.e. https://www.tomorrowland.com/home/'"></input>
-      </div> 
-      <div class="each-input-div-reg">
-        <label for="date" class="label-create label-date">Fecha</label>
-        <input type="date" id="date" name="date" class="input-event-date input-create" placeholder="'20/08/2024'"></input>
-      </div> 
-      <div class="each-input-div-reg">
-        <label for="location" class="label-create label-loc" >Ubicación</label>
-        <input type="text" id="location" name="location" class="input-event-loc input-create" placeholder="'F.e. Bélgica'"></input>
-      </div> 
-      <div class="each-input-div-reg">
-        <label for="description" class="label-create label-descript" >Descripción</label>
-        <input type="text" id="description" name="description" class="input-event-descript input-create" placeholder="'F.e. Festival de música electrónica'" maxlength="300"></input>
-      </div> 
-      <div class="each-input-div-reg">
-        <label for="image" class="label-create label-img">Imagen
+        <label for="image" class="label-create">Imagen
           <div class="div-span"> 
             <span class="img-file-span span">Ningún archivo seleccionado</span>
             <span class="img-file-btn span"> Buscar archivo</span>
@@ -61,8 +72,8 @@ const createEventForm = (categories) => {
         <input type="file" accept="image/*" id="image" name="image" class="input-event-img input-create"></input>
       </div> 
       <div class="each-input-div-reg">
-        <label for="category" class="label-create label-categ" required>Categoría</label>
-        <select id="category" name="category" class="input-event-category input-create" required>
+        <label for="category" class="label-create" required>Categoría</label>
+        <select id="category" name="category" class="input-create" required>
           ${generateCategoryOptions(categories)}
         </select>
       </div> 

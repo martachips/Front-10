@@ -1,3 +1,4 @@
+import { generateInput } from '../../components/forms/forms';
 import { renderHeader } from '../../components/header/header';
 import { userEndpoints } from '../../data/apiEndpoins';
 import { routes } from '../../data/links';
@@ -19,17 +20,26 @@ const createLoginForm = () => {
 
   loginSection.innerHTML = `
     <form class="login-form">
-    <h3 class="login-title">LOG IN</h3>
-      <div class="each-input-div">
-        <label class="label-email label-login" for="email">Email</label>
-        <input class="input-name input-login" type="email" id="email" name="email" required placeholder="F.e: durin123@gmail.com" autocomplete="email"></input>
-      </div>
-      <div class="each-input-div">
-        <label class="label-password label-login" for="password">Password</label>
-        <input class="input-password input-login" type="password" id="password" name="password" required placeholder="******"></input>  
-      </div>
+      <h3 class="login-title">LOG IN</h3>
+      ${generateInput({
+        className: 'each-input-div',
+        id: 'email',
+        placeholder: 'F.e: durin123@gmail.com',
+        required: true,
+        labelText: 'Email',
+        type: 'email',
+        labelInputClass: 'login'
+      })}
+      ${generateInput({
+        className: 'each-input-div',
+        id: 'password',
+        placeholder: '******',
+        required: true,
+        labelText: 'Password',
+        type: 'password',
+        labelInputClass: 'login'
+      })}
       <button class="submit-btn">Log In</button>
-
     </form>
     <div class="not-registered">  
       <p>Todavía no tengo una cuenta</p>
@@ -85,7 +95,6 @@ export const logOut = () => {
   localStorage.removeItem('user');
   localStorage.removeItem('token');
   renderHeader();
-  // window.location.href = routes[0].page;
   window.location.href = '/';
   home();
 };

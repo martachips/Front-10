@@ -5,6 +5,7 @@ import {
   displaySuccessMessage,
   getUser
 } from '../../utils/functions';
+import { generateInput } from '../forms/forms';
 import { hideLoader, loader } from '../loader/loader';
 import './user.css';
 
@@ -59,18 +60,30 @@ const printUser = (user) => {
               <button class="edit-data">Editar datos</button>
             </div>
             <form class="edit-form">
-              <div class="each-input-div">
-                <label class="label-edit-data" for="name">Name/Username</label>
-                <input type="text" id="name" name="name" value="${user.name}">
-              </div>
-              <div class="each-input-div">
-                <label class="label-edit-data" for="password">Nueva contraseña</label>
-                <input type="password" id="password" name="password" placeholder="Nueva contraseña">
-              </div>
-              <div class="each-input-div">
-                <label class="label-edit-data" for="confirm-password">Confirmar contraseña</label>
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña">
-              </div>
+            ${generateInput({
+              className: 'each-input-div',
+              id: 'name',
+              required: false,
+              labelText: 'Name/Username',
+              labelInputClass: 'edit-data',
+              value: `${user.name}`
+            })}
+            ${generateInput({
+              className: 'each-input-div',
+              type: 'password',
+              id: 'password',
+              placeholder: 'Nueva contraseña',
+              labelText: 'Nueva contraseña',
+              labelInputClass: 'edit-data'
+            })}
+             ${generateInput({
+               className: 'each-input-div',
+               type: 'password',
+               id: 'confirm-password',
+               placeholder: 'Confirmar contraseña',
+               labelText: 'Confirmar contraseña',
+               labelInputClass: 'edit-data'
+             })}
               <button type="submit" class="submit-edit-btn">Guardar cambios</button>
             </form>
           </section>

@@ -1,3 +1,4 @@
+import { generateInput } from '../../components/forms/forms';
 import { userEndpoints } from '../../data/apiEndpoins';
 import { routes } from '../../data/links';
 import { API } from '../../utils/api';
@@ -23,19 +24,30 @@ const createFormRegister = () => {
   
     <form class="register-form" >   
     <h3 class="register-title">REGISTRO</h3>
-      <div class="each-input-div-reg">
-        <label class="label-name label-reg" for="name">Name or Username</label>
-        <input class="input-name input-reg" type="text" id="name" name="name" required placeholder="F.e: Durin"></input>
-      </div>
-      <div class="each-input-div-reg">
-        <label class="label-email label-reg" for="email">Email</label>
-        <input class="input-name input-reg" type="email" id="email" name="email" required placeholder="F.e: durin123@gmail.com"></input>
-      </div>
-      <div class="each-input-div-reg">
-        <label class="label-password label-reg" for="password">Password</label>
-        <input class="input-password input-reg" type="password" id="password" name="password" required placeholder="******"></input>  
-        <p class="pass-control">La contraseña debe tener al menos 6 caracteres</p>
-      </div>
+    ${generateInput({
+      id: 'name',
+      placeholder: 'F.e: Durin',
+      labelText: 'Name or Username',
+      labelInputClass: 'reg',
+      type: 'text'
+    })}
+    ${generateInput({
+      id: 'email',
+      type: 'email',
+      placeholder: 'F.e: durin123@gmail.com',
+      labelText: 'Email',
+      labelInputClass: 'reg'
+    })}
+   ${generateInput({
+     id: 'password',
+     type: 'password',
+     placeholder: '******',
+     labelText: 'Password',
+     labelInputClass: 'reg',
+     extraContent:
+       '<p class="pass-control">La contraseña debe tener al menos 6 caracteres</p>'
+   })}
+      
         <button class="submit-btn">Registro</button>
     </form>
     <div class="already-registered">  

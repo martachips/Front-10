@@ -42,6 +42,7 @@
 }
 
 .pass-control {
+  /* position: absolute; */
   font-size: 0.7em;
   padding: 3px;
 }
